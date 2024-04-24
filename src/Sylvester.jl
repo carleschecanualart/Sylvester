@@ -1,4 +1,4 @@
-module SylvesterForms
+module Sylvester
 
 ## problems in windows for polymake
 
