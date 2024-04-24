@@ -13,6 +13,8 @@ using AlgebraicSolvers
 ## this procedure provides the Sylvester forms of a given degree in the dense case
 
 function getSylvesterFormsDense(f,x, nu)
+
+    n = length(x)
     
     if (nu < 0) return fill(0*x[1] + 0.0 * im, 0) end
 
