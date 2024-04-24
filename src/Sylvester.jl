@@ -290,6 +290,22 @@ function returnPoly(A,b)
     return poly
 end
 
+### A,b are the matrices providing the Newton polytopes
+
+function randomSparsePoly(A,b)
+    neqs = size(b)[1]
+    
+    for i = 1:neqs-1
+    
+    poly = returnPoly(A,b[i,:])
+    
+    push!(f, EigenvalueSolver.getRandomSystem_unmixed(x, poly, 1)[1])
+    
+    end
+
+    return f
+end
+
 ### list of sylvester forms in the sparse case -- this checks sigma-positive itself.
 
 function getSylvesterFormsSparse(f, x, A, nu)
