@@ -295,6 +295,8 @@ end
 function randomSparsePoly(A,b,x)
     neqs = size(b)[1]
     n= length(x)
+
+    f = []
     for i = 1:neqs-1
     
     poly = returnPoly(A,b[i,:],n)
