@@ -139,7 +139,7 @@ end
 
 ### this procedure provides the Sylvester forms of a given degree in the multihomogeneous case
 
-function getSylvesterFormsMultiDense(f,vargroups, nu)
+function getSylvesterFormsMultiDense(f,x,vargroups, nu)
     
     if (all(nu .>= 0)) 
 
@@ -253,7 +253,7 @@ function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
         
         nup = sum([ds[i,:] for i in subs])' - varsize' - alpha - [1 1]
     
-        sylvesterFormList = getSylvesterFormsMultiDense(fsubs,vargroups, nup)
+        sylvesterFormList = getSylvesterFormsMultiDense(fsubs,x,vargroups, nup)
 
         for i = 1:length(sylvesterFormList)            
             sylv = sylvesterFormList[i]
