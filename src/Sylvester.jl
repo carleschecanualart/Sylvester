@@ -381,7 +381,7 @@ end
 
 ## return the matrix in the sparse case
 
-function getResSparse(f, x, A, b, λ, nefsubs)
+function getResSparse(f, x, A, b, nefsubs)
     
     n = length(x)
     
