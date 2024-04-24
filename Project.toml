@@ -4,6 +4,7 @@ authors = ["Carles Checa"]
 version = "0.1.0"
 
 [deps]
+AlgebraicSolvers = "36cc366f-6373-477c-92c8-0345b2862178"
 IterTools = "c8e1da08-722c-5040-9ed9-7db0dc04731e"
 EigenvalueSolvers = "678e3805-c322-49de-aa76-96beab6c89e5"
 Polyhedra = "67491407-f73d-577b-9b50-8179a7c68029"
