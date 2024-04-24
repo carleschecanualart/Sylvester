@@ -297,7 +297,7 @@ function randomSparsePoly(A,b,x)
     n= length(x)
 
     f = []
-    for i = 1:neqs-1
+    for i = 1:neqs
     
     poly = returnPoly(A,b[i,:],n)
     
