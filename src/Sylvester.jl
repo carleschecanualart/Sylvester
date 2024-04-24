@@ -371,7 +371,7 @@ end
 ## return monomials in the sparse case
 
 function getAllMonomials(A, b, x)
-    poly = returnPoly(A, b)
+    poly = returnPoly(A, b, length(x))
     f = EigenvalueSolver.getRandomSystem_unmixed(x, poly, [1])[1]
     P = EigenvalueSolver.newtonPolytope(f, x)
     latticePoints = EigenvalueSolver.getLatticePoints(P)
