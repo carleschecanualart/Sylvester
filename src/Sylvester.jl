@@ -427,7 +427,7 @@ function getResSparse(f, x, A, b, λ, nefsubs)
     
     res = fill(0.0 + 0.0 * im, σ, length(Σ))
 
-    for i = 1:size(ds)[1]
+    for i = 1:size(b)[1]
         
         for j = 1:length(macaulayMulti[i])   
             
