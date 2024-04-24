@@ -195,7 +195,7 @@ end
 
 ### returns matrix and monomials of the multi-homogeneous case
 
-function getResMultiDense(f, vargroups, varsize, ds, nefsubs)
+function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
     
     n = length(vargroups)
     
