@@ -140,6 +140,8 @@ end
 ### this procedure provides the Sylvester forms of a given degree in the multihomogeneous case
 
 function getSylvesterFormsMultiDense(f,x,vargroups, nu)
+
+    n = length(vargroups)
     
     if (all(nu .>= 0)) 
 
