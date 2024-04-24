@@ -271,7 +271,7 @@ function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
 end
 
 
-function returnPoly(A,b)
+function returnPoly(A,b,n)
     
     P = polyhedron(hrep(A,b))
     
@@ -297,7 +297,7 @@ function randomSparsePoly(A,b,x)
     n= length(x)
     for i = 1:neqs-1
     
-    poly = returnPoly(A,b[i,:])
+    poly = returnPoly(A,b[i,:],n)
     
     push!(f, EigenvalueSolver.getRandomSystem_unmixed(x, poly, 1)[1])
     
