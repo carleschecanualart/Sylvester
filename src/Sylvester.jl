@@ -292,9 +292,9 @@ end
 
 ### A,b are the matrices providing the Newton polytopes
 
-function randomSparsePoly(A,b)
+function randomSparsePoly(A,b,x)
     neqs = size(b)[1]
-    
+    n= length(x)
     for i = 1:neqs-1
     
     poly = returnPoly(A,b[i,:])
