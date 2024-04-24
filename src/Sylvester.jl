@@ -205,7 +205,7 @@ function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
     
     alpha = sum([ds[i,:]  for i in nefsubs])'  - varsize' - minimum(ds; dims=1)
     
-    println(alpha)
+    #println(alpha)
 
     # monomials of that degree alpha
     
@@ -229,7 +229,7 @@ function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
     
     σ = sum(numRows) + sum(lengthSylv)
     
-    println(σ)
+    #println(σ)
 
     iter = 1;
 
@@ -237,7 +237,7 @@ function getResMultiDense(f, x, vargroups, varsize, ds, nefsubs)
 
     mapping = Dict(Σ .=> 1:length(Σ))
     
-    println(mapping)
+    #println(mapping)
 
     for i = 1:size(ds)[1]
         for j = 1:length(macaulayMulti[i])            
@@ -318,7 +318,7 @@ function getSylvesterFormsSparse(f, x, A, nu)
     
     monomialListNu = getAllMonomials(A, nu, x)
     
-    println(exponents.(monomialListNu))
+    #println(exponents.(monomialListNu))
     
     nForms = size(monomialListNu)[1]
     
@@ -393,7 +393,7 @@ function getResSparse(f, x, A, b, λ, nefsubs)
     
     nu = minimum([b[i,(n+1):(n+picardRank)] for i in nefsubs]; dims = 1)[1] - [1 1]'
     
-    println(nu)
+    #println(nu)
       
     alpha = Int.(hcat(zeros(Int64, 1, n), sum([b[i,(n+1):(n+picardRank)] for i in nefsubs])' - canonical' - nu'))
     
